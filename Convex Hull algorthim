@@ -1,0 +1,6 @@
+def convex_hull(points):
+    return [p for p in points if all((b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0]) <= 0 for a in points for b in points if a != b)]
+
+# Example
+points = [(0, 0), (4, 0), (4, 4), (0, 4), (2, 2)]
+print(convex_hull(points))
